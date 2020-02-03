@@ -79,7 +79,7 @@ $(document).ready(function () {
     
     // Activate submenu functionality
     // https://stackoverflow.com/questions/44467377/bootstrap-4-multilevel-dropdown-inside-navigation
-    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    /*$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
         }
@@ -100,7 +100,7 @@ $(document).ready(function () {
         function(){
             $(this).removeClass('open');
         }                           
-    );
+    );*/
     
     
     // Reset disabled links so they take the user to the required url (disabled so dropdown opens on hover rather than click)
@@ -117,11 +117,12 @@ $(document).ready(function () {
     /*----------- SAB Navigation 2 Appearance  ----------- */
     
     // Set width of SAB link in sub-landing page side panel   
-    $('#sab-landing-2 .sticky-list-back-button').css('width', $('.twoColSab-left').outerWidth() + 'px');
+    /*$('#sab-landing-2 .sticky-list-back-button').css('width', $('.twoColSab-left').outerWidth() + 'px');
     
     $(window).resize(function(){
         $('#sab-landing-2 .sticky-list-back-button').css('width', $('.twoColSab-left').outerWidth() + 'px'); 
         });
+    */
     
     
     
@@ -146,27 +147,31 @@ $(document).ready(function () {
     
     // Header navigation links
     // Finding full path so links work on files viewed locally through the file tree as well as when hosted through a local server.
-        full_path = window.location.pathname;
-        subpath_location = full_path.lastIndexOf('/');
-        initial_path = full_path.slice(0, subpath_location);
+    full_path = window.location.pathname;
+    console.log(window.location.host);
+    console.log(full_path);
+    subpath_location = full_path.lastIndexOf('/');
+    console.log(subpath_location);
+    initial_path = full_path.slice(0, subpath_location);
+    console.log(initial_path);
     
     $('#header-registrations-link').on('click',function(){
-        window.location.pathname = initial_path + "/other-Registrations.html";
+        window.location.pathname = "/sab/pages-topic/Registrations.html";
     });
     $('#header-business-link').on('click',function(){
-        window.location.pathname = initial_path + "/other-Business-Information.html";
+        window.location.pathname = initial_path + "/pages-topic/Business-Information.html";
     });
     $('#header-grants-link').on('click',function(){
-        window.location.pathname = initial_path + "/other-Grants-programs.html";
+        window.location.pathname = initial_path + "/pages-content/Grants-programs.html";
     });
     $('#header-advice-link').on('click',function(){
-        window.location.pathname = initial_path + "/other-Expertise-advice.html";
+        window.location.pathname = initial_path + "/pages-content/Expertise-advice.html";
     });
     $('#header-events-link').on('click',function(){
-        window.location.pathname = initial_path + "/other-Events-training.html";
+        window.location.pathname = initial_path + "/pages-content/Events-training.html";
     });
     $('#header-news-link').on('click',function(){
-        window.location.pathname = initial_path + "/other-News.html";
+        window.location.pathname = initial_path + "/pages-content/News.html";
     });    
 
     
