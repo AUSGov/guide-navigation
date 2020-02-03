@@ -3,8 +3,9 @@
 html, body {
     overflow-x: hidden;
 }
-h1, h2 {
-    font-weight: 600;
+h1, h2, h3, 
+.support-pathway-wrapper .support-pathway label {
+    font-weight: 600 !important;
 }
 
 .page-header .page-header-backgroundIcon .svg-container {
@@ -16,6 +17,9 @@ h1, h2 {
     display: flex;
     height: 100%;
     padding: 0 0 2rem 2rem;
+}
+#page-header .page-header-intro p {
+    font-size: 18px;
 }
 
 .anchor-menu {

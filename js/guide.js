@@ -145,33 +145,24 @@ $(document).ready(function () {
     });
     
     
-    // Header navigation links
-    // Finding full path so links work on files viewed locally through the file tree as well as when hosted through a local server.
-    full_path = window.location.pathname;
-    console.log(window.location.host);
-    console.log(full_path);
-    subpath_location = full_path.lastIndexOf('/');
-    console.log(subpath_location);
-    initial_path = full_path.slice(0, subpath_location);
-    console.log(initial_path);
-    
+    // Header navigation links   
     $('#header-registrations-link').on('click',function(){
         window.location.pathname = "/sab/pages-topic/Registrations.html";
     });
     $('#header-business-link').on('click',function(){
-        window.location.pathname = initial_path + "/pages-topic/Business-Information.html";
+        window.location.pathname = "/sab/pages-topic/Business-Information.html";
     });
     $('#header-grants-link').on('click',function(){
-        window.location.pathname = initial_path + "/pages-content/Grants-programs.html";
+        window.location.pathname = "/sab/pages-topic/Grants-programs.html";
     });
     $('#header-advice-link').on('click',function(){
-        window.location.pathname = initial_path + "/pages-content/Expertise-advice.html";
+        window.location.pathname = "/sab/pages-topic/Expertise-advice.html";
     });
     $('#header-events-link').on('click',function(){
-        window.location.pathname = initial_path + "/pages-content/Events-training.html";
+        window.location.pathname = "/sab/pages-topic/Events-training.html";
     });
     $('#header-news-link').on('click',function(){
-        window.location.pathname = initial_path + "/pages-content/News.html";
+        window.location.pathname = "/sab/pages-content/News.html";
     });    
 
     

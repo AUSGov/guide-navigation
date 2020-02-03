@@ -4837,9 +4837,11 @@ div.chat-later a { color: #fff; text-decoration: none; }
 /* GLOBAL */
 html, body { overflow-x: hidden; }
 
-h1, h2 { font-weight: 600; }
+h1, h2, h3, .support-pathway-wrapper .support-pathway label { font-weight: 600 !important; }
 
 .page-header .page-header-backgroundIcon .svg-container { -ms-flex-align: center; -webkit-box-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; padding: 0 0 2rem 2rem; }
+
+#page-header .page-header-intro p { font-size: 18px; }
 
 .anchor-menu .sticky-container a { text-decoration: none; }
 
