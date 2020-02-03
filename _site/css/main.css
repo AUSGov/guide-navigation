@@ -4837,13 +4837,15 @@ div.chat-later a { color: #fff; text-decoration: none; }
 /* GLOBAL */
 h1, h2 { font-weight: 600; }
 
+.page-header .page-header-backgroundIcon .svg-container { -ms-flex-align: center; -webkit-box-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; padding: 0 0 2rem 2rem; }
+
 .anchor-menu .sticky-container a { text-decoration: none; }
 
 .anchor-menu .sticky-container a.active-sticky { font-weight: 700; border-left: 4px solid #96B7DF; padding-left: 16px; }
 
 .c-padding-bottom p:last-child, .c-padding-bottom ol:last-child, .c-padding-bottom ul:last-child { padding-bottom: 0; }
 
-.search-bar-wrapper .search-bar-inner-wrapper .search-bar-search .input-group-container input { display: inline-block; position: absolute; right: 50px; }
+.search-bar-wrapper .search-bar-inner-wrapper .search-bar-search .input-group-container input { display: inline-block; position: absolute; right: 50px; width: 180px !important; }
 
 .search-bar-wrapper .search-bar-inner-wrapper .search-bar-search .input-group-container span { display: inline-block; position: absolute; right: 0; }
 
@@ -4991,45 +4993,6 @@ a.breadcrumb-link .hero-pathway-list-illustration-bg { display: none !important;
 @media only screen and (max-width: 900px) { .side_nav { width: 55%; } }
 
 @media only screen and (max-width: 618px) { .side_nav { width: 75%; } }
-
-/*  SAB NAVIGATION 2 */
-#guide_navlink_wrapper_2 { border-bottom: 2px solid #218080; padding: 0; }
-
-#guide_navlink_wrapper_2 #guide_navlink { background: #218080 url("../assets/Icon-chevron-down.svg") no-repeat; background-position: center right 15px; padding: 8px 25px 8px 8px; margin-left: 16px; }
-
-#guide_navlink_wrapper_2 #guide_navlink a { color: #ffffff; font-size: .9rem; text-decoration: none; font-weight: 600; }
-
-#guide_navlink_wrapper_2 #guide_navlink.open { background: #218080 url("../assets/Icon-chevron-up.svg") no-repeat; background-position: center right 15px; padding: 8px 25px 8px 8px; }
-
-#guide_navlink_wrapper_2 .dropdown-wrapper { position: relative; width: 210px; min-height: 25px; padding: 0 0 0 5px; }
-
-#guide_navlink_wrapper_2 .dropdown { position: absolute; }
-
-#guide_navlink_wrapper_2 .dropdown:hover { height: 400px; }
-
-#guide_navlink_wrapper_2 .dropdown:hover > .dropdown-menu { display: block; }
-
-#guide_navlink_wrapper_2 .dropdown-submenu:hover > .dropdown-menu { display: block; }
-
-#guide_navlink_wrapper_2 .dropdown-submenu:hover { text-decoration: underline; }
-
-#guide_navlink_wrapper_2 .dropdown-toggle { padding: 0 20px 0 5px; font-size: .9rem; color: #ffffff; opacity: 1.0; width: 210px; text-align: left; padding: 0 0 0 5px; cursor: default; }
-
-#guide_navlink_wrapper_2 .dropdown-toggle:after { display: none; }
-
-#guide_navlink_wrapper_2 .dropdown-menu { background: #186464; padding: 0; top: 32px !important; left: -13px !important; border: none !important; border-radius: 0px !important; width: 243px; cursor: pointer !important; }
-
-#guide_navlink_wrapper_2 .dropdown-menu a { text-decoration: none; padding: 0 0 0 5px; }
-
-#guide_navlink_wrapper_2 .dropdown-menu a.dropdown-item:focus, #guide_navlink_wrapper_2 .dropdown-menu a.dropdown-item:hover { background: none; text-decoration: underline !important; }
-
-#guide_navlink_wrapper_2 .dropdown-menu li { font-weight: 400; list-style-type: none; border-bottom: 1px solid #59A0A0; font-size: 1.1rem; padding: 10px; background: url("../assets/Icon-chevron-right-white.svg") no-repeat; background-position: center right 15px; background-size: 10px 16px; position: relative; }
-
-#guide_navlink_wrapper_2 .dropdown-menu li:hover { background: #0F4343 url("../assets/Icon-chevron-right-white.svg") no-repeat; background-position: center right 15px; background-size: 10px 16px; }
-
-#guide_navlink_wrapper_2 .dropdown-menu li .dropdown-menu { width: 300px; position: absolute; top: -2px !important; left: 243px !important; background: #0F4343; padding: 0; }
-
-#guide_navlink_wrapper_2 .dropdown-menu li .dropdown-menu li { font-weight: 400; border-bottom: 1px solid #59A0A0; border-left: 1px solid #59A0A0; font-size: 0.88rem; background: #0F4343; }
 
 /*  SAB READ MORE TILE . */
 #sab-read-more .action-card-button { background-color: #C7DFDF; }
