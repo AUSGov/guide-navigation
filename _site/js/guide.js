@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
     
-    /*----------- SAB Navigation 1 functionality  ----------- */
+    /*----------- SAB Navigation functionality  ----------- */
     
     
     var full_path = window.location.pathname,
@@ -25,7 +25,7 @@ $(document).ready(function () {
     
     
     
-    // Toggle SAB nav 1 open and shut
+    // Toggle SAB nav open and shut
     $('#guide_navlink_1').on('click', function(){
         if (!$('#guide_nav_wrapper').hasClass('side_nav_open')) {
             $('.side_nav').addClass('side_nav_open'); 
@@ -63,7 +63,7 @@ $(document).ready(function () {
     });
     
     
-    /*----------- SAB Navigation 1 Appearance  ----------- */
+    /*----------- SAB Navigation Appearance  ----------- */
     var page_height = $(document).height();
     $(".side_nav").height(page_height);
     
@@ -74,35 +74,7 @@ $(document).ready(function () {
     
     
     
-    
-    /*----------- SAB Navigation 2 functionality  ----------- */
-    
-    // Activate submenu functionality
-    // https://stackoverflow.com/questions/44467377/bootstrap-4-multilevel-dropdown-inside-navigation
-    /*$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
-        if (!$(this).next().hasClass('show')) {
-            $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
-        }
-        var $subMenu = $(this).next('.dropdown-menu');
-        $subMenu.toggleClass('show');
-
-        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-            $('.dropdown-submenu .show').removeClass('show');
-    });
-
-    return false;
-    });
-    
-    $('#guide_navlink').hover(
-        function(){
-            $(this).addClass('open');
-        },
-        function(){
-            $(this).removeClass('open');
-        }                           
-    );*/
-    
-    
+  
     // Reset disabled links so they take the user to the required url (disabled so dropdown opens on hover rather than click)
     // NOTE: hover on dropdown is performed with CSS NOT javascript
     $('.dropdown-submenu').on('click', function(){
@@ -112,20 +84,7 @@ $(document).ready(function () {
     });
 
    
- 
-    
-    /*----------- SAB Navigation 2 Appearance  ----------- */
-    
-    // Set width of SAB link in sub-landing page side panel   
-    /*$('#sab-landing-2 .sticky-list-back-button').css('width', $('.twoColSab-left').outerWidth() + 'px');
-    
-    $(window).resize(function(){
-        $('#sab-landing-2 .sticky-list-back-button').css('width', $('.twoColSab-left').outerWidth() + 'px'); 
-        });
-    */
-    
-    
-    
+
     
     /*----------- General page issues ----------- */
     

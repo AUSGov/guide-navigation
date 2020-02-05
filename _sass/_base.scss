@@ -1,5 +1,6 @@
 /* GLOBAL */
 
+// FIXES to CSS styles copied across from BGA.
 html, body {
     overflow-x: hidden;
 }
@@ -43,7 +44,6 @@ h1, h2, h3,
         padding-bottom: 0;
     }
 }
-
 .search-bar-wrapper 
 .search-bar-inner-wrapper 
 .search-bar-search
@@ -80,11 +80,15 @@ a.breadcrumb-link
         flex: initial !important;
     }
 }
+footer {
+    box-shadow: 0 50vh 0 50vh #18335C;
+}
 
+// MAIN NAVIGATION including dropdown hover functionality
 #navigation-bar {
     .navigation-main-menu:hover {
         background: $blue-active;
-    }
+    }   
     .dropdown {
         background: url("../assets/Icon-chevron-down.svg") no-repeat;
         background-position: center right 15px;
@@ -98,6 +102,14 @@ a.breadcrumb-link
             > .dropdown-menu {
                 display: block;
             } 
+        }
+    }
+    .dropdown-submenu {
+        &:hover > .dropdown-menu {
+            display: block;
+        }
+        &:hover {
+            text-decoration: underline;
         }
     }
     .dropdown-toggle {
@@ -117,7 +129,7 @@ a.breadcrumb-link
         border-radius: 0px !important;
         cursor: pointer !important;
         margin-top: 0px;
-        width: 300px;
+        width: 280px;
         
         a {
             text-decoration: none;
@@ -141,14 +153,29 @@ a.breadcrumb-link
             &:hover {
                 background: $blue-active-darkest;
             }
+            
+            .dropdown-menu { 
+                width: 300px;
+                position: absolute;
+                top: 0px !important;
+                left: 280px !important;
+                background: $teal-sab-darkest;
+                padding:0;
+                
+                li {
+                    font-weight: 400;
+                    border-bottom: 1px solid $blue-primary;
+                    border-left: 1px solid $blue-primary;
+                    font-size: 0.88rem;
+                    background: $blue-active-darkest;
+                }
+            }
         }
             
     }
 }
 
-
 @media (min-width: 1600px) {
-
 
     .col-sm-6 {
         .hero-pathway-list-illustration-image {
@@ -158,8 +185,6 @@ a.breadcrumb-link
             flex: 1 !important;
         }
     }
-
-
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
@@ -169,8 +194,7 @@ a.breadcrumb-link
     }
     .hero-pathway-list-content-left {
         flex: initial !important;
-    }
-    
+    } 
 }
 
 
@@ -182,8 +206,7 @@ a.breadcrumb-link
     .search-bar-wrapper {
         background: $blue-primary url("../assets/Icon-menu.svg") no-repeat;
         background-size: 20px 16px;
-        background-position: center right 15px;
-        
+        background-position: center right 15px;   
     }
     
     .search-bar-wrapper .search-bar-inner-wrapper .search-bar-search .input-group-container {
@@ -208,9 +231,7 @@ a.breadcrumb-link
         .hero-pathway-list-content-left {
             flex: initial !important;
         }
-
-    }
-    
+    } 
 }
 
 @media only screen and (max-width: 618px) {
@@ -222,296 +243,4 @@ a.breadcrumb-link
         flex: initial !important;
     }
 
-}
-
-
-
-/*  SAB LANDING PAGE TILES 1  */
-
-.sab-header-wrapper {
-    background: #E0EAF6;
-    margin: 0 -9999px;
-    padding: 80px 9999px;
-    
-    .description {
-        font-size: 18px;
-    }
-    
-}
-/*#sab-landing-1 {
-    .sticky-list-back-button {
-        color: $blue-primary;
-        background: url("../assets/Icon-chevron-left-blue.svg") no-repeat;
-        background-position: center left 1px;
-        background-size: 10px 16px;
-        padding: 0 0 0 15px;
-        
-    }
-    
-    .card-body {
-        padding: 0;
-    
-        .card-header {
-            background: $blue-primary-lightest;
-            padding: 16px 32px;
-            
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: .05rem;
-        }
-        
-        .card-title {
-            margin-top: 32px;
-            padding: 0 32px 16px 32px;
-        } 
-        .card-text {
-            padding: 0 32px 16px 32px;
-        }
-        .legacy-topicCard-button-text {
-            padding: 0 32px 32px 32px;
-        }
-    }
-}*/
-
-
-
-
-
-/*  SAB NAVIGATION 1 */
-
-// Link to navigation
-#guide_navlink_wrapper_1 {
-
-    padding: 8px 0 10px 0;
-    background: $blue-primary-lightest;
-    
-    a {
-        background: url("../assets/Icon-chevron-right-blue.svg") no-repeat;
-        background-position: center right;
-        background-size: 10px 16px;
-        padding-right: 20px;
-        
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    
-    p {
-        font-size: 0.9rem;
-        margin-bottom: 0;
-    }
-}
-
-// Navigation panel
-.side_nav {
-    display: none;
-    z-index: 1000;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: $blue-primary-lightest;
-    height: 100%;
-    -webkit-box-shadow: -4px 0px 6px -5px rgba(0,0,0,0.61);
-    -moz-box-shadow: -4px 0px 6px -5px rgba(0,0,0,0.61);
-    box-shadow: -4px 0px 6px -5px rgba(0,0,0,0.61);
-    width: 40%;
-    
-    &.side_nav_open {
-        display: block;
-    }
-    
-    .nav_close {
-        position:absolute;
-        top: 40px;
-        right: 12%;
-        padding: 5px 25px 5px 5px;
-        z-index: 2000;
-        cursor: pointer;
-        background: url("../assets/Icon-cross-333333.svg") no-repeat;
-        background-position: center right 2px;
-        background-size: 14px 14px;
-    }
-   
-    #guide_nav{
-        padding: 200px 0px 0;
-        
-        h3 {
-            margin-bottom: 16px;
-            padding: 0 42% 0 12%;
-            color: $blue-primary;
-        }
-    
-        ul {
-            padding: 0;
-            
-            li {
-                font-weight: 400;
-                list-style-type: none;
-                font-size: 0.9rem;
-                padding: 10px 42% 10px 12%;
-                background: url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                background-position: center right 42%;
-                background-size: 14px 20px;
-                cursor:pointer;
-                
-                &:hover {
-                    background: #DEE5F1 url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                    background-position: center right 42%;
-                    background-size: 14px 20px;
-                }
-            }
-            ul {
-                
-                li {
-                    font-weight: 400;
-                    padding: 10px 42% 10px 12%;
-                    border-bottom: none;
-                    font-size: 0.88rem;
-                    background: none;
-                    
-                    &:hover {
-                        background: none;
-                        
-                        a {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
-        
-            a {
-                text-decoration: none;
-            }
-        }
-        
-        .current_page {
-            border-left: 4px solid $blue-primary-mid;
-            font-weight: 700;
-            padding-left: 16px;
-        }
-        
-        .sub-menu-toggle {
-            &.open,
-            &.current {
-                background: #DEE5F1 url("../assets/Icon-chevron-up-333333.svg") no-repeat;
-                background-position: center right 42%;
-                background-size: 14px 20px;
-                font-weight: 600;
-            }
-        }
-        
-        .sub-menu {
-            display: none;
-            background: $white;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            
-            &.current, 
-            &.open {
-                display: block;
-            }
-        }
-
-    }
-    
-    
-    @media only screen and (max-width: 1500px) {
-        .nav-close {
-            right: 12%;
-        }
-        #guide_nav {
-            h3 {
-                padding: 0 32% 0 12%;
-            }
-            
-            ul li {
-               padding: 10px 32% 10px 12%;
-                background: url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                background-position: center right 32%;
-                background-size: 14px 20px;
-                
-                &:hover {
-                    background: #DEE5F1 url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                    background-position: center right 32%;
-                    background-size: 14px 20px;
-                }
-                
-                ul li {
-                     padding: 10px 32%;
-                }
-            }
-           .sub-menu-toggle {
-            &.open,
-            &.current {
-                background: #DEE5F1 url("../assets/Icon-chevron-up-333333.svg") no-repeat;
-                background-position: center right 32%;
-                background-size: 14px 20px;
-                font-weight: 600;
-            }
-        } 
-        }
-    }
-    
-    
-    @media only screen and (max-width: 1100px) {
-        width: 45%;  
-        
-        .nav-close {
-            right: 12%;
-        }
-        #guide_nav {
-            h3 {
-                padding: 0 12%;
-            }
-            
-            ul li {
-                padding: 10px 12%;
-                background: url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                background-position: center right 12%;
-                background-size: 14px 20px;
-                
-                &:hover {
-                    background: #DEE5F1 url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                    background-position: center right 12%;
-                    background-size: 14px 20px;
-                }
-                
-                ul li {
-                     padding: 10px 12%;
-                }
-            }
-           .sub-menu-toggle {
-            &.open,
-            &.current {
-                background: #DEE5F1 url("../assets/Icon-chevron-up-333333.svg") no-repeat;
-                background-position: center right 12%;
-                background-size: 14px 20px;
-                font-weight: 600;
-            }
-        } 
-        }
-    }
-    
-    @media only screen and (max-width: 900px) {
-        width: 55%;   
-    }
-    
-    @media only screen and (max-width: 618px) {
-        width: 75%;   
-    }
-    
-}
-
-//
-
-
-
-
-
-
-/*  SAB READ MORE TILE . */
-#sab-read-more {
-    .action-card-button {
-        background-color: $teal-light;
-    }
 }
