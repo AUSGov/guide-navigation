@@ -214,6 +214,13 @@ $(document).ready(function () {
     } // END if .anchor-menu .sticky-container EXISTS
     
     
+    // Moderator menu
+    $(".moderator-toggle").on("click", function(){
+        $(".moderator-menu").css('display', 'block');
+    });
+    $(".moderator-menu .menu-close").on("click", function(){
+        $(".moderator-menu").css('display', 'none');
+    });
     
    
     
