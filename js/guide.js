@@ -6,15 +6,19 @@ $(document).ready(function () {
     /*----------- SAB Navigation functionality  ----------- */
     
     
-    var full_path = window.location.pathname,
-        subpath_location = full_path.lastIndexOf('/'),
-        initial_path = full_path.slice(0, subpath_location),
-        end_path = full_path.slice((subpath_location + 1), full_path.length);
+    var full_path = window.location.pathname;
+        //subpath_location = full_path.lastIndexOf('/'),
+        //initial_path = full_path.slice(0, subpath_location),
+        //end_path = full_path.slice((subpath_location + 1), full_path.length);
+    
+    console.log(window.location.pathname);
+    //console.log(end_path);
     
     var href = $('.side_nav a').attr("href");
     
     $('.side_nav a').each(function(){
-        if( $(this).attr("href") == end_path ){
+        //console.log($(this).attr("href"));
+        if( $(this).attr("href") == window.location.pathname ){
             $(this).addClass('current_page');
             
             var parent_ul = $(this).parent().parent();
@@ -75,7 +79,7 @@ $(document).ready(function () {
     
     
   
-    // Reset disabled links so they take the user to the required url (disabled so dropdown opens on hover rather than click)
+    // Reset disabled links in MAIN NAVIGATION so they take the user to the required url (disabled so dropdown opens on hover rather than click)
     // NOTE: hover on dropdown is performed with CSS NOT javascript
     $('.dropdown-submenu').on('click', function(){
         $(this).children('a').css('text-decoration', 'underline');
@@ -214,6 +218,13 @@ $(document).ready(function () {
     } // END if .anchor-menu .sticky-container EXISTS
     
     
+    // Moderator menu
+    $(".moderator-toggle").on("click", function(){
+        $(".moderator-menu").css('display', 'block');
+    });
+    $(".moderator-menu .menu-close").on("click", function(){
+        $(".moderator-menu").css('display', 'none');
+    });
     
    
     
