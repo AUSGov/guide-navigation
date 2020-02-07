@@ -5,19 +5,11 @@ $(document).ready(function () {
     
     /*----------- SAB Navigation functionality  ----------- */
     
-    
     var full_path = window.location.pathname;
-        //subpath_location = full_path.lastIndexOf('/'),
-        //initial_path = full_path.slice(0, subpath_location),
-        //end_path = full_path.slice((subpath_location + 1), full_path.length);
-    
-    console.log(window.location.pathname);
-    //console.log(end_path);
     
     var href = $('.side_nav a').attr("href");
     
     $('.side_nav a').each(function(){
-        //console.log($(this).attr("href"));
         if( $(this).attr("href") == window.location.pathname ){
             $(this).addClass('current_page');
             
@@ -57,19 +49,25 @@ $(document).ready(function () {
         } else if ($(this).hasClass('open')) {
             $(this).removeClass('open');
             $(this).next('.sub-menu').removeClass('open');
-            $('.side_nav .sub-menu-toggle').removeClass('open');
+            //$('.side_nav .sub-menu-toggle').removeClass('open');
         } else {
-            $('.side_nav .sub-menu-toggle').removeClass('current').removeClass('open');
-            $('.sub-menu').removeClass('current').removeClass('open');
+            //ç.removeClass('current').removeClass('open');
+            //$('.sub-menu').removeClass('current').removeClass('open');
             $(this).addClass('open');
             $(this).next('.sub-menu').addClass('open');
         }
     });
     
+    // Disable link for current page
+    $('.current_page').on('click', function(e){
+        e.preventDefault(); 
+    });
+    
     
     /*----------- SAB Navigation Appearance  ----------- */
+   
     var page_height = $(document).height();
-    $(".side_nav").height(page_height);
+    $(".side_nav").height(page_height - 165);
     
     $(window).resize(function(){
         var page_height = $(document).height();
@@ -78,7 +76,8 @@ $(document).ready(function () {
     
     
     
-  
+  /*-----------Main page navigation ----------- */
+    
     // Reset disabled links in MAIN NAVIGATION so they take the user to the required url (disabled so dropdown opens on hover rather than click)
     // NOTE: hover on dropdown is performed with CSS NOT javascript
     $('.dropdown-submenu').on('click', function(){
