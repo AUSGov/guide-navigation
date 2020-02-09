@@ -5,21 +5,16 @@ $(document).ready(function () {
     
     /*----------- SAB Navigation functionality  ----------- */
     
-    var full_path = window.location.pathname;
-    
-    var href = $('.side_nav a').attr("href");
-    
+    // Add current page to guide menu. Add class to make it open when menu is initially opened.
     $('.side_nav a').each(function(){
         if( $(this).attr("href") == window.location.pathname ){
             $(this).addClass('current_page');
             
             var parent_ul = $(this).parent().parent();
-            parent_ul.addClass('current');
-            parent_ul.prev().addClass('current');
+            parent_ul.addClass('current').addClass('open');
+            parent_ul.prev().addClass('current').addClass('open');
         }
     });
-    
-    
     
     // Toggle SAB nav open and shut
     $('#guide_navlink_1').on('click', function(){
@@ -39,35 +34,28 @@ $(document).ready(function () {
             $('#guide_nav_wrapper').removeClass('side_nav_open'); 
         } 
     });
+      
     
-    $('.side_nav .sub-menu-toggle').on('click', function(){
+    // SAB side menu functionality
+    $('#guide_nav_wrapper .sub-menu-toggle').on('click', function(){
         
-        if($(this).hasClass('current')) {
-            $(this).removeClass('current');
-            $(this).next('.sub-menu').removeClass('current');
-            $('.side_nav .sub-menu-toggle').removeClass('current');
-        } else if ($(this).hasClass('open')) {
+        if ($(this).hasClass('open')) {
+            console.log("I am open");
             $(this).removeClass('open');
             $(this).next('.sub-menu').removeClass('open');
             //$('.side_nav .sub-menu-toggle').removeClass('open');
         } else {
-            //ç.removeClass('current').removeClass('open');
+            //$('.side_nav .sub-menu-toggle').removeClass('open');
             //$('.sub-menu').removeClass('current').removeClass('open');
             $(this).addClass('open');
             $(this).next('.sub-menu').addClass('open');
         }
     });
     
-    // Disable link for current page
-    $('.current_page').on('click', function(e){
-        e.preventDefault(); 
-    });
-    
     
     /*----------- SAB Navigation Appearance  ----------- */
-   
     var page_height = $(document).height();
-    $(".side_nav").height(page_height - 165);
+    $(".side_nav").height(page_height);
     
     $(window).resize(function(){
         var page_height = $(document).height();
@@ -75,21 +63,18 @@ $(document).ready(function () {
     });
     
     
-    
-  /*-----------Main page navigation ----------- */
+   
+    /*----------- General page functionality ----------- */
+
     
     // Reset disabled links in MAIN NAVIGATION so they take the user to the required url (disabled so dropdown opens on hover rather than click)
     // NOTE: hover on dropdown is performed with CSS NOT javascript
     $('.dropdown-submenu').on('click', function(){
         $(this).children('a').css('text-decoration', 'underline');
-        href = $(this).children('a').attr('href');
+        var href = $(this).children('a').attr('href');
         window.location = href;
     });
-
-   
-
     
-    /*----------- General page issues ----------- */
     
     // Prevent click empty 'a' tag from causing scrolling
     $('a').on('click', function(e){
@@ -130,6 +115,12 @@ $(document).ready(function () {
     
     
     /*----------- Add side-menu (sticky_list) functionality ----------- */
+    
+    // Add
+    //var full_path = window.location.pathname;
+    //var href = $('.side_nav a').attr("href");
+    
+
     
     // Function to change active side menu state on scroll (called within the if .anchor-menu .sticky-container  exisits block)
     function add_position(positions) {
@@ -226,8 +217,28 @@ $(document).ready(function () {
     });
     
    
+    // Modal functionality
+    $('a[href=""]').on("click", function(){
+        $(".modal-wrapper").addClass("active");
+        $(".modal-background").addClass("active");
+    });
     
+    $(".modal-close").on("click", function(){
+        $(".modal-wrapper").removeClass("active");
+        $(".modal-background").removeClass("active");
+    });
 
+    $(".modal-background").on("click", function(){
+        $(".modal-wrapper").removeClass("active");
+        $(".modal-background").removeClass("active");
+    });
+    
+        
+   
+   
+    
+    
+    
     
 }); // END doc ready
 

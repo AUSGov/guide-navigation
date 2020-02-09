@@ -5010,7 +5010,7 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .current_page:hover { text-decoration: none; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu-toggle.open, #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu-toggle.current { background: #FFF4D0 url("../assets/Icon-chevron-up-333333.svg") no-repeat; background-position: center right 32px; background-size: 14px 20px; font-weight: 600; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu-toggle.open { background: #FFF4D0 url("../assets/Icon-chevron-up-333333.svg") no-repeat; background-position: center right 32px; background-size: 14px 20px; font-weight: 600; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu { display: none; background: #ffffff; padding: 5px 0 0 0; }
 
@@ -5020,7 +5020,7 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.optional { text-transform: none; display: inline-block; border: solid 2px #FFD964; font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; padding: 0 10px; border-radius: 16px; margin-left: 10px; font-size: 12px; float: right; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu.current, #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu.open { display: block; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu.open { display: block; }
 
 /*  SAB READ MORE TILE - OLD */
 #sab-read-more .action-card-button { background-color: #C7DFDF; }
@@ -5045,6 +5045,14 @@ header { position: relative; }
 #moderator-menu .moderator-menu ul li a { font-size: 12px; color: #ffffff; }
 
 /* MODAL */
-.modal-wrapper { display: block; position: absolute; background: #ffffff; display: none; }
+.modal-wrapper { display: none; }
+
+.modal-wrapper.active { display: block; position: fixed; width: 500px; padding: 64px 32px 32px 32px; top: 30%; left: calc(50% - 250px); background: #ffffff; z-index: 7000; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.5); border-top: solid #4569A0 4px; }
+
+.modal-wrapper.active .modal-close { text-indent: -9999px; height: 24px; width: 24px; background: url(../assets/Icon-cross-blue.svg) no-repeat; position: absolute; right: 32px; top: 32px; cursor: pointer; }
+
+.modal-background { display: none; }
+
+.modal-background.active { width: 100%; height: 100%; display: block; background: rgba(51, 51, 51, 0.5); position: fixed; z-index: 6999; }
 
 /*# sourceMappingURL=main.css.map */
