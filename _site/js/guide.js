@@ -218,9 +218,12 @@ $(document).ready(function () {
     
    
     // Modal functionality
+    // Empty href modal
     $('a[href=""]').on("click", function(){
-        $(".modal-wrapper").addClass("active");
-        $(".modal-background").addClass("active");
+        if (!$(this).parents('.sticky-container').length){
+            $(".modal-wrapper").addClass("active");
+            $(".modal-background").addClass("active");
+        }
     });
     
     $(".modal-close").on("click", function(){
@@ -233,11 +236,21 @@ $(document).ready(function () {
         $(".modal-background").removeClass("active");
     });
     
-        
-   
-   
+    // Accordion not working modal
+    $(".accordion-group-toggle").on("click", function(){
+        $(".modal-wrapper").addClass("active");
+        $(".modal-background").addClass("active");
+    });
+    $(".accordion-item").on("click", function(){
+        $(".modal-wrapper").addClass("active");
+        $(".modal-background").addClass("active");
+    });
     
-    
+    // Search not working modal
+     $(".btn-search").on("click", function(){
+        $(".modal-wrapper").addClass("active");
+        $(".modal-background").addClass("active");
+    });
     
     
 }); // END doc ready

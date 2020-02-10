@@ -1,3 +1,3 @@
 # BGA Guide navigation
 
-[Prototype](https://ausgov.github.io/guide-navigation/index.html)
+[Prototype](https://ausgov.github.io/sab/index.html)
