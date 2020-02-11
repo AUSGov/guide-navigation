@@ -4964,7 +4964,7 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_navlink_wrapper_1 .link_wrapper { cursor: pointer; padding: 0; }
 
-#guide_navlink_wrapper_1 .link_wrapper a { background-position: center right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05rem; color: #333333; text-decoration: none; padding: 4px 0 0 0; line-height: 16px; width: 135px; display: block; }
+#guide_navlink_wrapper_1 .link_wrapper span { background-position: center right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05rem; color: #333333; text-decoration: none; padding: 4px 0 0 0; line-height: 16px; width: 135px; display: block; }
 
 #guide_navlink_wrapper_1 .link_wrapper .btn-wrapper { border: #FFD964 4px solid; width: 42px; height: 42px; position: absolute; right: -21px; top: 0px; border-radius: 50%; }
 

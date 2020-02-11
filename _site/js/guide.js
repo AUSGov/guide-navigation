@@ -116,29 +116,84 @@ $(document).ready(function () {
     
     /*----------- Add side-menu (sticky_list) functionality ----------- */
     
-    // Add
-    //var full_path = window.location.pathname;
-    //var href = $('.side_nav a').attr("href");
+    function create_id(text){
+        var text_no_num = text.replace(/[0-9]/g, ''),
+            text_no_punctuation = text_no_num.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?\']/g,''),
+            final_text = text_no_punctuation.trim();
+        
+        var a_lower_text = final_text.replace(/\s+/g, '-').toLowerCase();
+        return(a_lower_text);
+    }
     
-
+    // Add id to each anchor section that corresponds to the menu item
+    //var anchor_sections = $('.anchor-section');
+    //console.log(anchor_sections);
+    //console.log(anchor_sections[2]);
     
-    // Function to change active side menu state on scroll (called within the if .anchor-menu .sticky-container  exisits block)
+    /*$('.anchor-section').each(function(){
+        var h2 = $(this).find('h2').text();
+        var id = create_id(h2);   
+        //console.log(h2);
+        
+    });*/
+    
+    
+    // Function for menu stickiness on scroll (called within the if .anchor-menu .sticky-container exists block)
     function add_position(positions) {
-            for ( var i = 0; i < positions.length; i++) {
-                var top_position = positions[i] - 40;
-                if ( $(window).scrollTop() >= top_position) {
-                    $('.anchor-menu a').removeClass('active-sticky');
-                    $('.anchor-menu a[data-value=' + positions[i] + ']').addClass('active-sticky');
-                }
+
+        for (var i = 0; i < positions.length; i++) {
+            var top_position = positions[i] - 40;
+            if ($(window).scrollTop() >= top_position) {
+                $('.anchor-menu a').removeClass('active-sticky');
+                $('.anchor-menu a[data-value=' + positions[i] + ']').addClass('active-sticky');
             }
         }
+    }
+    
+    
+    // Function to make the side menu sticky
+    var stickyPosition = $('.anchor-menu').offset(); //This var is outside the function because it needs to be determined BEFORE window resizing,.
+    function menuStickiness() {
+        
+        var win = $(window),
+            stickyWidth = $('.twoCol39-left').width();
+        
+        // Set side-menu initial horizontal position 
+        if(win.width() < 575) {
+            $('.anchor-menu').css('position', 'relative').css('top', 'auto');
+        } else if (win.width() >= 575) {
+            if (win.scrollTop() >= stickyPosition.top) {
+                $('.anchor-menu').css('position', 'fixed').css('top', '0').css('width', stickyWidth);
+            } else {
+                $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+            }
+        } 
+        
+        // Reset side-menu position on scroll
+        $(window).scroll(function () {
+
+            stickyWidth = $('.twoCol39-left').width();
+
+            if (win.width() < 575) {
+                $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+            } else if (win.width() >= 575) {
+                if (win.scrollTop() >= stickyPosition.top) {
+                    $('.anchor-menu').css('position', 'fixed').css('top', '0').css('width', stickyWidth);
+                } else if (win.scrollTop() < stickyPosition.top) {
+                    $('.anchor-menu').css('position', 'relative').css('top', 'auto').css('width', stickyWidth);
+                }
+            }
+        });
+    }
+
     
     if ($( ".anchor-menu .sticky-container" ).length) {
-    
+        
         // Get text from each sticky list a-tag and convert it into an id.
         // Replace spaces with hyphens and remove numerical characters & punctuation at the start where necessary       
         var sticky_list_2 = {};
         $('.anchor-menu a').each(function(){
+            //console.log($(this));
             var a_text = $(this).text(),
                 text_no_num = a_text.replace(/[0-9]/g, ''),
                 text_no_punctuation = text_no_num.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?\']/g,''),
@@ -148,42 +203,22 @@ $(document).ready(function () {
             sticky_list_2[a_text] = a_lower_text;
             
         }); 
+        //console.log(sticky_list_2);
 
-     
-        // Side menu stickyness
-        if ($(window).width() > 480) {
-            $('.anchor-menu').css('position','relative');
-                var stickyPosition = $('.anchor-menu').offset(),
-                    stickyWidth = $('.twoCol39-left').width(),
-                    footerPosition = $('.footer-wrapper').offset(),
-                    stickyHeight = $('.sticky-container ul').height(),
-                    footerHeight = $('.footer-wrapper').height(),
-                    pageHeight = $(document).height(),
-                    unstickyPosition = pageHeight - footerHeight - stickyHeight - 60;
-        
-            $('.anchor-menu').css('width',stickyWidth);
-    
-            $(window).scroll(function(){
-                if($(window).scrollTop() > stickyPosition.top && $(window).scrollTop() < unstickyPosition){
-                    $('.anchor-menu').css('position','fixed').css('top','0');
-                } else {
-                    $('.anchor-menu').css('position','relative');
-                }    
-            });
-            $(window).resize(function(){
-                var stickyWidth = $('.twoCol39-left').width();
-                $('.anchor-menu').css('width',stickyWidth);
-            });
-        }
+        // Apply menu stickiness
+        menuStickiness();
     
         
         // Side menu scroll to section of the page
-        // And add top position of element to anchor link as a data-value
+        // and add top position of element to anchor link as a data-value
         $('.anchor-menu a').each(function(){
+            
             var a_text = $(this).text(),
                 element_id = '#' + sticky_list_2[a_text],
                 element_position = $(element_id).offset();
-            $(this).attr('data-value', element_position.top);
+            console.log(element_id);
+            console.log(element_position);
+            $(this).attr('data-value', Math.round(element_position.top));
         
             $(this).on('click', function(){
                 $([document.documentElement, document.body]).animate(
@@ -191,14 +226,14 @@ $(document).ready(function () {
                 $('.anchor-menu a').removeClass('active-sticky');
                 $(this).addClass('active-sticky');
             });
-        });    
+        });   
         
     
         // Change menu active state on scroll to different sections of the page
         var positions = [];
         $('.anchor-menu a').each(function(){
             var element_position = $(this).attr('data-value');
-            positions.push(element_position);
+            positions.push(Math.round(element_position));
         }); 
     
         $(window).scroll(function(){
@@ -206,6 +241,16 @@ $(document).ready(function () {
         });
     
     } // END if .anchor-menu .sticky-container EXISTS
+    
+    
+    // Menu stickiness on .resize()
+    $(window).on('resize', function(){
+        if ($( ".anchor-menu .sticky-container" ).length) {
+            menuStickiness();
+        }
+    });
+    
+
     
     
     // Moderator menu
@@ -220,7 +265,7 @@ $(document).ready(function () {
     // Modal functionality
     // Empty href modal
     $('a[href=""]').on("click", function(){
-        if (!$(this).parents('.sticky-container').length){
+        if (!$(this).parents('.sticky-container').length && !$(this).hasClass("guide_navlink")){
             $(".modal-wrapper").addClass("active");
             $(".modal-background").addClass("active");
         }

@@ -26,9 +26,9 @@
   
     <li><a href="/sab/pages-content/Australian-trade-measurement-laws.html">Australian trade measurement laws</a></li>
   
-    <li><a href="/sab/pages-topic/Bankruptcy.html">Bankruptcy</a></li>
-  
     <li><a href="/sab/pages-content/Bankruptcy.html">Bankruptcy</a></li>
+  
+    <li><a href="/sab/pages-topic/Bankruptcy.html">Bankruptcy</a></li>
   
     <li><a href="/sab/pages-content/Building-and-construction-industry.html">Building and construction industry</a></li>
   
@@ -158,9 +158,13 @@
   
     <li><a href="/sab/pages-topic/Fair-trading.html">Fair trading</a></li>
   
+    <li><a href="/sab/pages-content/Finance-for-your-business.html">Finance for your business</a></li>
+  
     <li><a href="/sab/pages-topic/Finance.html">Finance</a></li>
   
     <li><a href="/sab/pages-content/Financial-and-insurance-services-industry.html">Financial and insurance services industry</a></li>
+  
+    <li><a href="/sab/pages-content/Find-help-and-support.html">Find help and support</a></li>
   
     <li><a href="/sab/pages-content/Fisheries-industry.html">Fisheries industry</a></li>
   
@@ -390,9 +394,9 @@
   
     <li><a href="/sab/pages-content/Preparing-yourself-for-business.html">Preparing yourself for business</a></li>
   
-    <li><a href="/sab/pages-topic/Product-labelling.html">Product labelling</a></li>
-  
     <li><a href="/sab/pages-content/Product-labelling.html">Product labelling</a></li>
+  
+    <li><a href="/sab/pages-topic/Product-labelling.html">Product labelling</a></li>
   
     <li><a href="/sab/pages-content/Product-safety-rules-and-standards.html">Product safety rules and standards</a></li>
   
@@ -434,6 +438,8 @@
   
     <li><a href="/sab/pages-content/Register-your-business-name.html">Register your business name</a></li>
   
+    <li><a href="/sab/pages-content/Register-your-business-the-right-way.html">Register your business the right way</a></li>
+  
     <li><a href="/sab/pages-topic/Registrations.html">Registrations</a></li>
   
     <li><a href="/sab/pages-content/Rental-hiring-and-real-estate-services-industry.html">Rental, hiring and real estate services industry</a></li>
@@ -454,9 +460,11 @@
   
     <li><a href="/sab/pages-topic/Seeking-finance.html">Seeking finance</a></li>
   
-    <li><a href="/sab/pages-content/Selling-or-closing-your-business.html">Selling or closing your business</a></li>
+    <li><a href="/sab/pages-content/Selling-manufacturing-and-sourcing-products.html">Selling, manufacturing and sourcing products</a></li>
   
     <li><a href="/sab/pages-topic/Selling-or-closing-your-business.html">Selling or closing your business</a></li>
+  
+    <li><a href="/sab/pages-content/Selling-or-closing-your-business.html">Selling or closing your business</a></li>
   
     <li><a href="/sab/pages-content/Set-up-a-market-stall.html">Set up a market stall</a></li>
   
@@ -526,23 +534,17 @@
   
     <li><a href="/sab/css/main.css"></a></li>
   
-    <li><a href="/sab/pages-landing/sab-Prepare-for-tax.html">Prepare for tax</a></li>
+    <li><a href="/sab/pages-landing/sab-check-if-youre-ready.html">Check if you're ready</a></li>
   
-    <li><a href="/sab/pages-landing/sab-know-the-law.html">Know the law</a></li>
+    <li><a href="/sab/pages-landing/sab-contractors-and-contracts.html">Contractors and contracts</a></li>
   
-    <li><a href="/sab/pages-landing/sab-make-key-decisions.html">Make key decisions</a></li>
+    <li><a href="/sab/pages-landing/sab-establishing-your-business.html">Establishing your business</a></li>
   
-    <li><a href="/sab/pages-landing/sab-plan-for-success.html">Plan for success</a></li>
+    <li><a href="/sab/pages-landing/sab-find-out-what-you-need.html">Find out what you need</a></li>
   
-    <li><a href="/sab/pages-landing/sab-prepare-for-business.html">Prepare for business</a></li>
-  
-    <li><a href="/sab/pages-landing/sab-prepare-your-finances.html">Prepare your finances</a></li>
-  
-    <li><a href="/sab/pages-landing/sab-protect-your-business.html">Protect your business</a></li>
+    <li><a href="/sab/pages-landing/sab-get-advice-and-support.html">Get advice and support</a></li>
   
     <li><a href="/sab/pages-landing/sab-register-your-business.html">Register your business</a></li>
-  
-    <li><a href="/sab/pages-landing/sab-set-up-operations.html">Set up operations</a></li>
   
     <li><a href="/sab/pages-landing/sab.html">Starting a business guide</a></li>
   
