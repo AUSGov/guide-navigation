@@ -124,20 +124,7 @@ $(document).ready(function () {
         var a_lower_text = final_text.replace(/\s+/g, '-').toLowerCase();
         return(a_lower_text);
     }
-    
-    // Add id to each anchor section that corresponds to the menu item
-    //var anchor_sections = $('.anchor-section');
-    //console.log(anchor_sections);
-    //console.log(anchor_sections[2]);
-    
-    /*$('.anchor-section').each(function(){
-        var h2 = $(this).find('h2').text();
-        var id = create_id(h2);   
-        //console.log(h2);
-        
-    });*/
-    
-    
+
     // Function for menu stickiness on scroll (called within the if .anchor-menu .sticky-container exists block)
     function add_position(positions) {
 
@@ -203,7 +190,6 @@ $(document).ready(function () {
             sticky_list_2[a_text] = a_lower_text;
             
         }); 
-        //console.log(sticky_list_2);
 
         // Apply menu stickiness
         menuStickiness();
@@ -216,16 +202,21 @@ $(document).ready(function () {
             var a_text = $(this).text(),
                 element_id = '#' + sticky_list_2[a_text],
                 element_position = $(element_id).offset();
+            
             console.log(element_id);
-            console.log(element_position);
-            $(this).attr('data-value', Math.round(element_position.top));
+            
+            if ($(element_id).length){
+                console.log(element_id);
+                console.log(element_position);
+                $(this).attr('data-value', Math.round(element_position.top));
         
-            $(this).on('click', function(){
-                $([document.documentElement, document.body]).animate(
-                    { scrollTop: $(element_id).offset().top }, 400);
-                $('.anchor-menu a').removeClass('active-sticky');
-                $(this).addClass('active-sticky');
-            });
+                $(this).on('click', function(){
+                    $([document.documentElement, document.body]).animate(
+                        { scrollTop: $(element_id).offset().top }, 400);
+                    $('.anchor-menu a').removeClass('active-sticky');
+                    $(this).addClass('active-sticky');
+                });
+            }
         });   
         
     
