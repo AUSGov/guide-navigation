@@ -4867,9 +4867,9 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #navigation-bar .navigation-main-menu:hover { background: #18335C; }
 
-#navigation-bar .dropdown { background: url("../assets/Icon-chevron-down.svg") no-repeat; background-position: center right 15px; background-size: 12px 18px; padding: 0px 25px 0px 0px; }
+#navigation-bar .dropdown { background: url("../assets/Icon-chevron-down.svg") no-repeat; background-position: center right 15px; padding: 0px 25px 0px 0px; }
 
-#navigation-bar .dropdown:hover { background: #18335C url("../assets/Icon-chevron-up.svg") no-repeat; background-position: center right 15px; background-size: 12px 18px; }
+#navigation-bar .dropdown:hover { background: #18335C url("../assets/Icon-chevron-up.svg") no-repeat; background-position: center right 15px; }
 
 #navigation-bar .dropdown:hover > .dropdown-menu { display: block; }
 
