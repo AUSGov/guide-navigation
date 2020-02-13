@@ -4913,7 +4913,11 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
   .hero-pathway-list-content-left { flex: initial !important; } }
 
 /*  SAB LANDING PAGE TILES  */
-.sab-header-wrapper { background: #E0EAF6; margin: 0 -9999px; padding: 80px 9999px; }
+.sab-header-wrapper { background: #FFF4D0; margin: 0 -9999px; padding: 0 9999px; }
+
+.sab-header-wrapper .sab-header-title { margin: 0 -9999px; padding: 32px 9999px; background: #FFD964; }
+
+.sab-header-wrapper .sab-header-content { padding: 48px 0; }
 
 .sab-header-wrapper .description { font-size: 18px; }
 
@@ -4928,7 +4932,7 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 .guide-banner-wrapper .guide-banner .back-arrow:before { content: ""; display: inline-block; background: url(../assets/Icon-chevron-left.svg) #ffffff no-repeat; background-size: 9px 14px; background-position: center; height: 34px; width: 34px; border-radius: 50%; position: absolute; left: 0px; top: 4px; box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.2); }
 
-.breadcrumbs-guide-wrapper .container-fluid .row { padding-left: 220px; }
+.breadcrumbs-guide-wrapper .container-fluid .row { padding-left: 240px; }
 
 /* SAB LANDING PAGE TILES */
 .sab-landing-content .row { display: flex; align-items: stretch; }
@@ -4964,7 +4968,7 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_navlink_wrapper_1 .link_wrapper { cursor: pointer; padding: 0; }
 
-#guide_navlink_wrapper_1 .link_wrapper span { background-position: center right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05rem; color: #333333; text-decoration: none; padding: 4px 0 0 0; line-height: 16px; width: 135px; display: block; }
+#guide_navlink_wrapper_1 .link_wrapper span { background-position: center right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05rem; color: #333333; text-decoration: none; padding: 4px 0 0 0; line-height: 16px; width: 160px; display: block; }
 
 #guide_navlink_wrapper_1 .link_wrapper .btn-wrapper { border: #FFD964 4px solid; width: 42px; height: 42px; position: absolute; right: -21px; top: 0px; border-radius: 50%; }
 
@@ -4996,7 +5000,9 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper ul li:hover { background: #FFD964 url("../assets/Icon-chevron-down-333333.svg") no-repeat; background-position: center right 32px; background-size: 14px 20px; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li { font-weight: 400; padding: 10px 24px 10px 32px; font-size: 14px; background: none; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li { font-weight: 400; padding: 10px 24px 10px 32px; font-size: 14px; background: none; position: relative; }
+
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li a { padding-right: 80px; display: inline-block; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li:hover { background: none; }
 
@@ -5016,9 +5022,11 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu a { color: #333333; padding-left: 24px; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.required { text-transform: none; display: inline-block; background: #FFD964; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; padding: 0 10px; border-radius: 16px; margin-left: 10px; font-size: 12px; float: right; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span { text-transform: none; display: inline-block; padding: 0 10px; border: solid 2px #FFD964; border-radius: 16px; margin-left: 10px; font-size: 12px; float: right; position: absolute; right: 0; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.optional { text-transform: none; display: inline-block; border: solid 2px #FFD964; font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; padding: 0 10px; border-radius: 16px; margin-left: 10px; font-size: 12px; float: right; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.required { background: #FFD964; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; top: calc(50% - 14px); }
+
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.optional { border: solid 2px #FFD964; font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; top: calc(50% - 11px); }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu.open { display: block; }
 
