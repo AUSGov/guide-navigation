@@ -298,6 +298,12 @@
                     background-size: 14px 20px;
                     cursor: pointer;
                     border-bottom: 1px solid $yellow-secondary-light;
+                    position: relative;
+                    
+                    a {
+                        padding-right: 80px;
+                        display: inline-block;
+                    }
 
                     &:hover {
                         background: $yellow-secondary-lightest url("../assets/Icon-chevron-down-333333.svg") no-repeat;
@@ -361,29 +367,28 @@
                     color: $black-light;
                     padding-left: 24px;
                 }
-                span.required {
+                span {
                     text-transform: none;
                     display: inline-block;
+                    padding: 0 10px;
+                    border: solid 2px $yellow-secondary-lightest;
+                    border-radius: 16px;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    float: right;
+                    position: absolute;
+                    right: 0;
+                }
+                span.required {
                     background: $yellow-secondary-lightest;
                     @include font-format($font-family, $font-semibold, normal);
-                    padding: 0 10px;
-                    border-radius: 16px;
-                    margin-left: 10px;
-                    font-size: 12px;
-                    float: right;
+                    top: calc(50% - 14px);
                 }
                 span.optional {
-                    text-transform: none;
-                    display: inline-block;
                     border: solid 2px $yellow-secondary-lightest;
                     @include font-format($font-family, $font-regular, normal);
-                    padding: 0 10px;
-                    border-radius: 16px;
-                    margin-left: 10px;
-                    font-size: 12px;
-                    float: right;
+                    top: calc(50% - 11px);
                 }
-
                 &.open {
                     display: block;
                 }
