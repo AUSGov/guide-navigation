@@ -1,4 +1,4 @@
-/*  SAB LANDING PAGE TILES  */
+/*  SAB LANDING PAGES  */
 
 .sab-header-wrapper {
     background: #FFF4D0;
@@ -17,8 +17,20 @@
     .description {
         font-size: 18px;
     }
+    .check-if-youre-ready {
+        background: #FFF4D0 url(../assets/sab-prepare-for-business-yellow.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background: #FFF4D0;
+        }
+    }
 }
 
+.breadcrumbs-guide-wrapper {
+    min-height: 48px;
+}
 
 /* SAB BANNER */
 .guide-banner-wrapper {
@@ -284,16 +296,23 @@
                 margin-bottom: 16px;
                 padding: 0 20% 0 0;
                 color: $black-light;
-                text-transform: uppercase;
                 font-size: 32px;
                 line-height: 38px;
+            }
+            a {
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                    color: $black-light;
+                }
             }
         }
 
         .guide_menu_wrapper {
 
             padding: 48px 12% 0 12%;
-
+            
             ul {
                 padding: 0;
 
@@ -302,15 +321,13 @@
                     list-style-type: none;
                     font-size: 16px;
                     padding: 10px 32px;
-                    background: url("../assets/Icon-chevron-down-333333.svg") no-repeat #FFF4D0;
                     background-position: center right 32px;
                     background-size: 14px 20px;
                     cursor: pointer;
                     border-bottom: 1px solid $yellow-secondary-light;
 
                     &:hover {
-                        background: $yellow-secondary-lightest url("../assets/Icon-chevron-down-333333.svg") no-repeat;
-                        background-position: center right 32px;
+                        background-position: center center;
                         background-size: 14px 20px;
                     }
                 }
@@ -318,14 +335,14 @@
                 ul {
                     li {
                         font-weight: 400;
-                        padding: 10px 24px 10px 32px;
+                        padding: 10px 24px 10px 16px;
                         font-size: 14px;
                         background: none; 
-                        position: relative; //
+                        position: relative; 
                         
                         a {
-                            padding-right: 80px; //
-                            display: inline-block; //
+                            padding-right: 80px; 
+                            display: inline-block;
                         }
 
                         &:hover {
@@ -356,25 +373,53 @@
                     text-decoration: none;
                 }
             }
-
+            .sub-landing-link {
+                padding: 0;
+                
+                a {
+                    display: inline-block;
+                    padding: 10px 16px;
+                    width: 80%;
+                    color: $black-light;
+                    background: #FFF4D0;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        background: #FFEAAA;
+                    }
+                }
+            }
             .sub-menu-toggle {
-
-                &.open {
-                    background: #FFF4D0 url("../assets/Icon-chevron-up-333333.svg") no-repeat;
-                    background-position: center right 32px;
+                background: url("../assets/Icon-chevron-down-333333.svg") no-repeat $yellow-secondary-lightest;
+                background-position: center center;
+                background-size: 14px 20px;
+                display: inline-block;
+                width: 20%;
+                text-indent: -9999px;
+                height: 100%;
+                padding: 10px 20px;
+                
+                &:hover {
+                    background: url("../assets/Icon-chevron-down-333333.svg") no-repeat $yellow-secondary-light;
+                    background-position: center center;
                     background-size: 14px 20px;
-                    font-weight: 600;
+                }
+                
+                &.open {
+                    background: $yellow-secondary-lightest url("../assets/Icon-chevron-up-333333.svg") no-repeat;
+                    background-position: center center;
+                    background-size: 14px 20px;
+
                 }
             }
 
             .sub-menu {
                 display: none;
                 background: $white;
-                padding: 5px 0 0 0;
+                padding: 0 0 0 0;
 
                 a {
                     color: $black-light;
-                    padding-left: 24px;
                 }
                 
                 span {
@@ -388,11 +433,13 @@
                     float: right;
                     position: absolute;
                     right: 0;
+                    width: 20%;
+                    text-align: center;
                 }
                 span.required {
                     background: $yellow-secondary-lightest;
                     @include font-format($font-family, $font-semibold, normal);
-                    top: calc(50% - 14px);
+                    top: calc(50% - 11px);
                 }
                 span.optional {
                     border: solid 2px $yellow-secondary-lightest;
@@ -405,6 +452,14 @@
                 }
             }
 
+        }
+        .switch_guides {
+            margin-top: 48px;
+            
+            a {
+                color: $black-light;
+                text-decoration: underline;
+            }
         }
     }
 }

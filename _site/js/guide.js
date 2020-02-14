@@ -42,13 +42,13 @@ $(document).ready(function () {
         if ($(this).hasClass('open')) {
             console.log("I am open");
             $(this).removeClass('open');
-            $(this).next('.sub-menu').removeClass('open');
-            //$('.side_nav .sub-menu-toggle').removeClass('open');
+            
+            $(this).parent().next('.sub-menu').removeClass('open');
         } else {
-            //$('.side_nav .sub-menu-toggle').removeClass('open');
-            //$('.sub-menu').removeClass('current').removeClass('open');
+            //console.log($(this).parent().next('.sub-menu'));
+            
             $(this).addClass('open');
-            $(this).next('.sub-menu').addClass('open');
+            $(this).parent().next('.sub-menu').addClass('open');
         }
     });
     
