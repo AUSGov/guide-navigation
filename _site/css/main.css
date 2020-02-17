@@ -4913,9 +4913,37 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
   .hero-pathway-list-content-left { flex: initial !important; } }
 
 /*  SAB LANDING PAGE TILES  */
-.sab-header-wrapper { background: #E0EAF6; margin: 0 -9999px; padding: 80px 9999px; }
+.sab-header-wrapper { background: #E0EAF6; margin: 0 -9999px; padding: 0 9999px; }
+
+.sab-header-wrapper .sab-header-title { margin: 0 -9999px; padding: 32px 9999px; background: #FFD964; }
+
+.sab-header-wrapper .sab-header-content { padding: 48px 0; }
 
 .sab-header-wrapper .description { font-size: 18px; }
+
+.sab-header-wrapper .check-if-youre-ready { background: #E0EAF6 url(../assets/sab-prepare-for-business-blue.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .check-if-youre-ready { background: #E0EAF6; } }
+
+.sab-header-wrapper .find-out-what-you-need { background: #E0EAF6 url(../assets/sab-make-key-decisions-blue.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .find-out-what-you-need { background: #E0EAF6; } }
+
+.sab-header-wrapper .get-advice-and-support { background: #E0EAF6 url(../assets/sab-plan-for-success-blue.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .get-advice-and-support { background: #E0EAF6; } }
+
+.sab-header-wrapper .contractors-and-contracts { background: #E0EAF6 url(../assets/sab-prepare-for-tax-blue.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .contractors-and-contracts { background: #E0EAF6; } }
+
+.sab-header-wrapper .register-your-business { background: #E0EAF6 url(../assets/sab-register-your-business-blue.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .register-your-business { background: #E0EAF6; } }
+
+.sab-header-wrapper .establishing-your-business { background: #E0EAF6 url(../assets/sab-set-up-operations-blue.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .establishing-your-business { background: #E0EAF6; } }
 
 /* SAB BANNER */
 .guide-banner-wrapper { background: #FFD964; margin: 3px -9999px; padding: 0 9999px; }
@@ -5025,6 +5053,10 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.optional { border: solid 2px #FFD964; font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; top: calc(50% - 11px); }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu.open { display: block; }
+
+#guide_nav_wrapper #guide_nav .switch_guides { margin-top: 48px; }
+
+#guide_nav_wrapper #guide_nav .switch_guides a { color: #333333; text-decoration: underline; }
 
 /*  SAB READ MORE TILE - OLD */
 #sab-read-more .action-card-button { background-color: #C7DFDF; }

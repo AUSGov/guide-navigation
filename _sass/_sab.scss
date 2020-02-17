@@ -3,10 +3,73 @@
 .sab-header-wrapper {
     background: #E0EAF6;
     margin: 0 -9999px;
-    padding: 80px 9999px;
+    padding:0 9999px;
+
+    .sab-header-title {
+        margin: 0 -9999px;
+        padding: 32px 9999px; 
+        background: $yellow-secondary-lightest;
+    }
+    .sab-header-content {
+        padding: 48px 0;
+    }
 
     .description {
         font-size: 18px;
+    }
+    .check-if-youre-ready {
+        background:  #E0EAF6 url(../assets/sab-prepare-for-business-blue.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background:  #E0EAF6;
+        }
+    }
+    .find-out-what-you-need {
+        background:  #E0EAF6 url(../assets/sab-make-key-decisions-blue.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background:  #E0EAF6;
+        }
+    }
+    .get-advice-and-support {
+        background:  #E0EAF6 url(../assets/sab-plan-for-success-blue.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background:  #E0EAF6;
+        }
+    }
+    .contractors-and-contracts {
+        background: #E0EAF6 url(../assets/sab-prepare-for-tax-blue.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background:  #E0EAF6;
+        }
+    }
+    .register-your-business {
+        background:  #E0EAF6 url(../assets/sab-register-your-business-blue.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background:  #E0EAF6;
+        }
+    }
+    .establishing-your-business {
+        background:  #E0EAF6 url(../assets/sab-set-up-operations-blue.png) no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        
+        @media (max-width: 768px) {
+            background:  #E0EAF6;
+        }
     }
 }
 
@@ -394,6 +457,14 @@
                 }
             }
 
+        }
+        .switch_guides {
+            margin-top: 48px;
+            
+            a {
+                color: $black-light;
+                text-decoration: underline;
+            }
         }
     }
 }
