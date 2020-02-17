@@ -4925,6 +4925,26 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 @media (max-width: 768px) { .sab-header-wrapper .check-if-youre-ready { background: #FFF4D0; } }
 
+.sab-header-wrapper .find-out-what-you-need { background: #FFF4D0 url(../assets/sab-make-key-decisions-yellow.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .find-out-what-you-need { background: #FFF4D0; } }
+
+.sab-header-wrapper .get-advice-and-support { background: #FFF4D0 url(../assets/sab-plan-for-success-yellow.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .get-advice-and-support { background: #FFF4D0; } }
+
+.sab-header-wrapper .contractors-and-contracts { background: #FFF4D0 url(../assets/sab-prepare-for-tax-yellow.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .contractors-and-contracts { background: #FFF4D0; } }
+
+.sab-header-wrapper .register-your-business { background: #FFF4D0 url(../assets/sab-register-your-business-yellow.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .register-your-business { background: #FFF4D0; } }
+
+.sab-header-wrapper .establishing-your-business { background: #FFF4D0 url(../assets/sab-set-up-operations-yellow.png) no-repeat; background-size: contain; background-position-x: right; }
+
+@media (max-width: 768px) { .sab-header-wrapper .establishing-your-business { background: #FFF4D0; } }
+
 .breadcrumbs-guide-wrapper { min-height: 48px; }
 
 /* SAB BANNER */
